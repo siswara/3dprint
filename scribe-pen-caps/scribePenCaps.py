@@ -12,7 +12,7 @@ penSmallerRadius = penSmallerDiameter/2
 penTopHeight = 12
 baseHeight = 25
 
-capThickness = 1
+capThickness = 1.5
 tighteningDepth = 0.2
 tighteningHeight = 5
 
@@ -30,7 +30,7 @@ capTop = capTop.translate((0, 0, baseHeight))
 capCover = cq.Workplane("front")\
     .circle(penRadius + capThickness)\
     .extrude(capThickness)\
-    .translate((0, 0, baseHeight + penTopHeight))
+    .translate((0, 0, baseHeight + penTopHeight - capThickness))
 
 tighter = cq.Workplane("front")\
     .moveTo(penRadius, 0)\
